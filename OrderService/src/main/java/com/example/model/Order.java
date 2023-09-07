@@ -22,11 +22,11 @@ public class Order {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getOrderName() {
+	public String getName() {
 		return name;
 	}
-	public void setOrderName(String orderName) {
-		this.name = orderName;
+	public void setName(String getName) {
+		this.name = getName;
 	}
 	public double getPrice() {
 		return price;
@@ -36,7 +36,7 @@ public class Order {
 	}
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", orderName=" + name + ", price=" + price + "]";
+		return "Order [id=" + id + ", Name=" + name + ", price=" + price + "]";
 	}
 	public Order(int id, String orderName, double price) {
 		super();
