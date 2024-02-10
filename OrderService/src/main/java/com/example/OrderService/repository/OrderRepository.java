@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.example.OrderService.model.Order;
+import com.example.OrderService.model.Product;
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Long>{
 
@@ -17,4 +18,6 @@ public interface OrderRepository extends JpaRepository<Order, Long>{
 //	@Query("SELECT o FROM orderTBL o WHERE o.name = :name AND o.id= :id AND o.price= :price")
 //    public List<Order> findOrderFiltering(@Param("name") String name,@Param("id") String id,@Param("price") String price);
 
+	@Query(nativeQuery = true, value = "select * from orderTBL where ORDER_ID =:orderId")
+	Order getOrderByOrderId(@Param("orderId") String orderId);
 }
