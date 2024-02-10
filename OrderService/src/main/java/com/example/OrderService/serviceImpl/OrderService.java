@@ -1,4 +1,4 @@
-package com.example.service;
+package com.example.OrderService.serviceImpl;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,8 +11,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.example.model.Order;
-import com.example.repository.OrderRepository;
+import com.example.OrderService.model.Order;
+import com.example.OrderService.repository.OrderRepository;
 
 @Service
 public class OrderService {
@@ -29,7 +29,7 @@ public class OrderService {
 
 	public Optional<Order> getOrderById(int id) {
 		logger.info("inside getOrderById - Service");
-		return orderRepository.findById(id);
+		return orderRepository.findById((long) id);
 	}
 
 
@@ -40,6 +40,7 @@ public class OrderService {
 
 	public List<Order> getOrderByName(String name) {
 		logger.info("inside getOrderByName - Service");
-		return orderRepository.findOrderByName(name);
+//		return orderRepository.findOrderByName(name);
+		return null;
 	}
 }	

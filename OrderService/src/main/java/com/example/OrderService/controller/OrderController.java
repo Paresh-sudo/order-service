@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.OrderService.controller;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.model.Order;
-import com.example.service.OrderService;
+import com.example.OrderService.model.Order;
+import com.example.OrderService.serviceImpl.OrderService;
 @RestController
 @RequestMapping("/api")
 public class OrderController {
@@ -30,12 +30,6 @@ public class OrderController {
 	private OrderService orderService;
     private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
 	
-    
-	private static List<Order> orders = new ArrayList<>(Arrays.asList(
-			new Order(1,"TV",10000),
-			new Order(2,"Mobile",5000),
-			new Order(3,"Mobile",8000)
-			));
 	
 	@GetMapping("/orders")
 	public ResponseEntity getAllOrders(@RequestParam(defaultValue = "0") int page,

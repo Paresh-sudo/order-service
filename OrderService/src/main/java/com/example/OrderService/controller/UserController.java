@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.OrderService.controller;
 
 import java.util.List;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.model.User;
-import com.example.repository.UserRepository;
+import com.example.OrderService.model.User;
+import com.example.OrderService.repository.UserRepository;
 
 @RestController
 @RequestMapping("/api")

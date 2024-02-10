@@ -1,4 +1,4 @@
-package com.example.service;
+package com.example.OrderService.serviceImpl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,8 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.example.model.Product;
-import com.example.repository.ProductRepository;
+import com.example.OrderService.model.Product;
+import com.example.OrderService.repository.ProductRepository;
 
 @Service
 public class ProductService {
